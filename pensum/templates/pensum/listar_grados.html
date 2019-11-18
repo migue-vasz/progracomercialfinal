@@ -1,0 +1,11 @@
+{% extends 'pensum/base.html' %}
+
+{% block content %}
+  {% for i in g %}
+    <div class="post">
+      <h2>
+        <a href="{% url 'detalle_grado' pk=i.pk %}">{{i.descripcion}}</a>
+      </h2>
+    </div>
+  {% endfor %}
+{% endblock %}
